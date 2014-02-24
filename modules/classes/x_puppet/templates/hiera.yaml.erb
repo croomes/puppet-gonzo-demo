@@ -1,0 +1,23 @@
+---
+:backends:
+  - yaml
+  - http
+
+:hierarchy:
+  - defaults
+  - "nodes/%{fqdn}"
+  - "roles/%{role_id}"
+  - "ostypes/%{osfamily}"
+  - global
+
+:yaml:
+  :datadir: "/vagrant/puppet-gonzo-demo/hieradata"
+
+:http:
+  :host: <%= @enc_server %>
+  :port: 5984
+  :output: json
+  :failure: graceful
+  :paths:
+    - /configuration/%{fqdn}
+    - /configuration/common    

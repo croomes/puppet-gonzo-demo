@@ -1,0 +1,3 @@
+---
+x_puppet::puppet_server: master
+x_puppet::master::enc_server: master
