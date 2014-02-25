@@ -4,8 +4,8 @@
 [[ -d /etc/puppetlabs/puppet/environments ]] || mkdir /etc/puppetlabs/puppet/environments
 [[ -d /etc/puppetlabs/puppet/environments/production ]] || mkdir /etc/puppetlabs/puppet/environments/production
 
-# Copy demo modules
-[[ -d /vagrant/puppet-gonzo-demo ]] && cp -r /vagrant/puppet-gonzo-demo/* /etc/puppetlabs/puppet/environments/production/
+# Symlink demo modules for development
+[[ -d /vagrant/puppet-gonzo-demo ]] && ln -s /vagrant/puppet-gonzo-demo/* /etc/puppetlabs/puppet/environments/development
 
 # Set path so gem provider is found
 export PATH=$PATH:/opt/puppet/bin

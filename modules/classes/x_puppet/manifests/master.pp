@@ -25,5 +25,4 @@ class x_puppet::master (
     content => template('x_puppet/hiera.yaml.erb'),
     notify  => Service['pe-httpd'],
   }
- 
 }
