@@ -9,6 +9,8 @@
     group = pe-puppet
     archive_files = true
     archive_file_server = master
+    modulepath = /etc/puppetlabs/puppet/environments/$environment/modules/roles:/etc/puppetlabs/puppet/environments/$environment/modules/profiles:/etc/puppetlabs/puppet/environments/$environment/modules/classes:/etc/puppetlabs/puppet/environments/$environment/modules/vendor:/opt/puppet/share/puppet/modules
+    manifest = /etc/puppetlabs/puppet/environments/$environment/manifests/site.pp    
 
 [master]
     certname = master
@@ -21,8 +23,6 @@
     ssl_client_verify_header = SSL_CLIENT_VERIFY
     storeconfigs_backend = puppetdb
     storeconfigs = true
-    modulepath = /etc/puppetlabs/puppet/environments/$environment/modules/roles:/etc/puppetlabs/puppet/environments/$environment/modules/profiles:/etc/puppetlabs/puppet/environments/$environment/modules/classes:/etc/puppetlabs/puppet/environments/$environment/modules/vendor:/opt/puppet/share/puppet/modules
-    manifest = /etc/puppetlabs/puppet/environments/$environment/manifests/site.pp
 
 [agent]
     report = true
