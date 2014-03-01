@@ -1,3 +1,3 @@
-class role_www {
+class role_default {
   include profile_base
 }

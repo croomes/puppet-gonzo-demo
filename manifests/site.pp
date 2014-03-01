@@ -40,13 +40,13 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  class { 'gonzo': }
+  class { 'role_default': }
 }
 
 node master {
   class { 'role_puppet_master': }
 }
 
-node agent1 {
-  class { 'role_www': }
-}
+# node agent1 {
+#   class { 'role_www': }
+# }
