@@ -1,3 +1,5 @@
 ---
+gonzo::tier: production
 x_puppet::puppet_server: master
 x_puppet::master::enc_server: master
+pe_mcollective::role::agent::mcollective_registerinterval: 600
