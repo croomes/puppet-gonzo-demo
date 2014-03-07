@@ -1,0 +1,27 @@
+[submodule "modules/vendor/bamboo"]
+	path = modules/vendor/bamboo
+	url = https://github.com/croomes/puppet-bamboo.git
+[submodule "modules/vendor/couchdb"]
+	path = modules/vendor/couchdb
+	url = https://github.com/croomes/puppet-couchdb.git
+[submodule "modules/vendor/gonzo"]
+	path = modules/vendor/gonzo
+	url = https://github.com/croomes/puppet-gonzo.git
+[submodule "modules/vendor/java"]
+	path = modules/vendor/java
+	url = https://github.com/puppetlabs/puppetlabs-java.git
+[submodule "modules/vendor/rpmrepos"]
+	path = modules/vendor/rpmrepos
+	url = https://github.com/croomes/puppet-rpmrepos.git
+[submodule "modules/vendor/rvm"]
+	path = modules/vendor/rvm
+	url = https://github.com/maestrodev/puppet-rvm.git
+[submodule "modules/vendor/vcsrepo"]
+	path = modules/vendor/vcsrepo
+	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
+[submodule "modules/vendor/wget"]
+	path = modules/vendor/wget
+	url = https://github.com/maestrodev/puppet-wget.git
+[submodule "modules/vendor/mccouchdb"]
+	path = modules/vendor/mccouchdb
+	url = https://github.com/croomes/puppet-mccouchdb.git
