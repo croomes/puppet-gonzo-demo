@@ -43,7 +43,7 @@ done
 ## Build & Deployment Plans
 
 This would be better as you can see where a release has been deployed to, but it will
-currently create an environment like 'GZO-LAB-13' rather than the git tag.  More work
+currently create an environment like 'lab_13' rather than the git tag.  More work
 needed to figure this out...
 
 1. Create a plan
@@ -73,7 +73,7 @@ done
 
 5. Create a Deployment project.
 6. Create an Environment (e.g. "Lab")
-7. Configure Versioning.  Set to "${bamboo.buildResultKey}" (TODO: figure out how to pass tag)
+7. Configure Versioning.  Set to "${bamboo.shortPlanKey}_${bamboo.buildNumber}" (TODO: figure out how to pass tag)
 8. Configure Task, set artifact to tarball created by the build task.
 9. New Task to extract artifact, like:
 
@@ -83,12 +83,15 @@ done
 workdir=$(pwd)
 tarball=(*.tar.gz)
 
-mkdir /etc/puppetlabs/puppet/environments/${bamboo_buildResultKey} 2>/dev/null
+env="${bamboo.shortPlanKey}_${bamboo.buildNumber}"
+env=$(echo $env | sed -e 's/\(.*\)/\L\1/')
 
-(cd /etc/puppetlabs/puppet/environments/${bamboo_buildResultKey} && \
+mkdir /etc/puppetlabs/puppet/environments/${env} 2>/dev/null
+
+(cd /etc/puppetlabs/puppet/environments/${env} && \
  tar zxf ${workdir}/${tarball}) || \
-   (echo "ERROR deploying ${bamboo_buildResultKey} ($?)"; exit 1)
-   
-echo "SUCCESS, deployed ${bamboo_buildResultKey}"
+   (echo "ERROR deploying ${env} ($?)"; exit 1)
+
+echo "SUCCESS, deployed ${env}"
 exit 0
 ```
