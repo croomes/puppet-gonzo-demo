@@ -1,5 +1,5 @@
 ---
 gonzo::tier: production
 x_puppet::puppet_server: master
-x_puppet::master::enc_server: master
-pe_mcollective::role::agent::mcollective_registerinterval: 600
+x_puppet::master::enc_server: 192.168.0.199
+pe_mcollective::role::agent::mcollective_registerinterval: 60
