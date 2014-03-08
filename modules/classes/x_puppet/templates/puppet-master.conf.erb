@@ -1,3 +1,6 @@
+<%
+  puppet_release = @release.gsub(/\./, '_')
+%>
 [main]
     certname = master
     dns_alt_names = master,puppet
@@ -10,7 +13,7 @@
     archive_files = true
     archive_file_server = master
     modulepath = /etc/puppetlabs/puppet/environments/$environment/modules/roles:/etc/puppetlabs/puppet/environments/$environment/modules/profiles:/etc/puppetlabs/puppet/environments/$environment/modules/classes:/etc/puppetlabs/puppet/environments/$environment/modules/vendor:/opt/puppet/share/puppet/modules
-    manifest = /etc/puppetlabs/puppet/environments/$environment/manifests/site.pp    
+    manifest = /etc/puppetlabs/puppet/environments/$environment/manifests/site.pp
 
 [master]
     certname = master
@@ -30,4 +33,4 @@
     localconfig = $vardir/localconfig
     graph = true
     pluginsync = true
-    environment = production 
+    environment = <%= puppet_release %>

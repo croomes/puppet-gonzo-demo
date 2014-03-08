@@ -1,5 +1,6 @@
 class x_puppet (
   $certname = $::hostname,
+  $release  = 'production',
   $puppet_server = 'puppet',
 ) {
 
