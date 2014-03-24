@@ -4,7 +4,7 @@
   - http
 
 :hierarchy:
-  - "nodes/%{fqdn}"
+  - "nodes/%{certname}"
   - "roles/%{role_id}"
   - "ostypes/%{osfamily}"
   - defaults
@@ -18,5 +18,5 @@
   :output: json
   :failure: graceful
   :paths:
-    - /configuration/%{fqdn}
+    - /configuration/%{certname}
     - /configuration/common

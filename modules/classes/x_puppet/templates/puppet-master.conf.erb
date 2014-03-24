@@ -1,6 +1,4 @@
-<%
-  puppet_release = @release.gsub(/\./, '_')
-%>
+<% puppet_release = @release.gsub(/\./, '_') %>
 [main]
     certname = master
     dns_alt_names = master,puppet
@@ -17,11 +15,9 @@
 
 [master]
     certname = master
-    ca_name = 'Puppet CA generated on master at 2014-02-24 01:25:19 +0000'
-    reports = http,puppetdb
-    reporturl = https://localhost:443/reports/upload
-    node_terminus = exec
-    external_nodes = /etc/puppetlabs/puppet-dashboard/external_node
+    ca_name = 'Puppet CA'
+    reports = console,puppetdb
+    node_terminus = console
     ssl_client_header = SSL_CLIENT_S_DN
     ssl_client_verify_header = SSL_CLIENT_VERIFY
     storeconfigs_backend = puppetdb

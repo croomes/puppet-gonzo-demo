@@ -1,5 +1,5 @@
 <%
-  puppet_release = @release.gsub(/\./, '_')
+  puppet_release = @release ? @release.gsub(/\./, '_') : 'development'
 %>
 [main]
     certname = <%= @certname %>
