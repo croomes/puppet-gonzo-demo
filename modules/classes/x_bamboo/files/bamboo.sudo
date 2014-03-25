@@ -1,0 +1,1 @@
+bamboo  ALL = (root) NOPASSWD: /opt/puppet/bin/puppet

@@ -24,4 +24,13 @@
 	url = https://github.com/maestrodev/puppet-wget.git
 [submodule "modules/vendor/mccouchdb"]
 	path = modules/vendor/mccouchdb
-	url = https://github.com/croomes/puppet-mccouchdb.git
+  url = https://github.com/croomes/puppet-mccouchdb.git
+[submodule "modules/vendor/ntp"]
+	path = modules/vendor/ntp
+	url = https://github.com/puppetlabs/puppetlabs-ntp.git
+[submodule "modules/vendor/deploy"]
+	path = modules/vendor/deploy
+	url = https://github.com/mkrakowitzer/puppet-deploy.git
+[submodule "modules/vendor/jira"]
+	path = modules/vendor/jira
+	url = https://github.com/brycejohnson/puppet-jira.git

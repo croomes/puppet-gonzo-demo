@@ -16,4 +16,13 @@ class x_bamboo (
     ensure => directory,
     owner  => 'bamboo',
   }
+
+  # Let bamboo trigger Puppet runs
+  file { '/etc/sudoers.d/bamboo':
+    ensure => file,
+    source => 'puppet:///modules/x_bamboo/bamboo.sudo',
+    owner  => 'root',
+    group  => 'root',
+    mode   => 0440,
+  }
 }
