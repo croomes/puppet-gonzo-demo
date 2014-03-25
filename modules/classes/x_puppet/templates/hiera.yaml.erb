@@ -4,7 +4,7 @@
   - http
 
 :hierarchy:
-  - "nodes/%{certname}"
+  - "nodes/%{clientcert}"
   - "roles/%{role_id}"
   - "ostypes/%{osfamily}"
   - defaults
@@ -18,5 +18,4 @@
   :output: json
   :failure: graceful
   :paths:
-    - /configuration/%{certname}
-    - /configuration/common
+    - /configuration/%{clientcert}
